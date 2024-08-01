@@ -1,0 +1,7 @@
+com\demian\demian\Demian.class
+com\demian\demian\FeedCommand.class
+com\demian\demian\FlyCommand.class
+com\demian\demian\DupeCommand.class
+com\demian\demian\GamemodeCommand.class
+com\demian\demian\HealCommand.class
+com\demian\demian\GodCommand.class

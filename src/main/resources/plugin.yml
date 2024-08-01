@@ -1,0 +1,17 @@
+name: Demian
+version: '1.0-SNAPSHOT'
+main: com.demian.demian.Demian
+api-version: '1.21'
+commands:
+  heal:
+    description: Heal yourself
+  feed:
+    description: Feed yourself
+  fly:
+    description: Fly
+  gm:
+    description: Change your gamemode
+  god:
+    description: God mode
+  dupe:
+    description: Duplicate items
