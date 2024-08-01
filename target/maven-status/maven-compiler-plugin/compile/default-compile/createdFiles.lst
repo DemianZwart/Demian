@@ -5,3 +5,4 @@ com\demian\demian\DupeCommand.class
 com\demian\demian\GamemodeCommand.class
 com\demian\demian\HealCommand.class
 com\demian\demian\GodCommand.class
+com\demian\demian\HelloCommand.class

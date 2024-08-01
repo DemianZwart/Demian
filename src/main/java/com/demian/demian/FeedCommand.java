@@ -5,12 +5,14 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.potion.PotionEffectType;
+import org.jetbrains.annotations.NotNull;
 
 public class FeedCommand implements CommandExecutor {
+
     @Override
-    public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
-        if (commandSender instanceof Player) {
-            Player player = (Player) commandSender;
+    public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, String[] args) {
+        if (sender instanceof Player) {
+            Player player = (Player) sender;
             int halfHunger = 10; // Half of the maximum food level, which is 20
             if (player.getFoodLevel() < halfHunger) {
                 player.setFoodLevel(20);

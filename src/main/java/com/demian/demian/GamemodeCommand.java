@@ -5,15 +5,17 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.jetbrains.annotations.NotNull;
 
 public class GamemodeCommand implements CommandExecutor {
+
     @Override
-    public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
-        if (commandSender instanceof Player) {
-            Player player = (Player) commandSender;
+    public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, String[] args) {
+        if (sender instanceof Player) {
+            Player player = (Player) sender;
             if (!player.isOp()) {
                 player.sendMessage("You do not have permission to use this command.");
-                return false;
+                return true;
             }
             if (player.getGameMode() == GameMode.CREATIVE) {
                 player.setGameMode(GameMode.SURVIVAL);
@@ -22,8 +24,9 @@ public class GamemodeCommand implements CommandExecutor {
                 player.setGameMode(GameMode.CREATIVE);
                 player.sendMessage("You are now in creative mode.");
             }
-            return true;
+        } else {
+            sender.sendMessage("This command can only be used by players.");
         }
-        return false;
+        return true;
     }
 }

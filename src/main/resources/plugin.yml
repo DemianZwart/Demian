@@ -3,6 +3,8 @@ version: '1.0-SNAPSHOT'
 main: com.demian.demian.Demian
 api-version: '1.21'
 commands:
+  showitem:
+    description: Show the item in your hand
   heal:
     description: Heal yourself
   feed:
@@ -15,3 +17,5 @@ commands:
     description: God mode
   dupe:
     description: Duplicate items
+  hello:
+    description: Say hello
