@@ -14,8 +14,7 @@ public class HelloCommand implements CommandExecutor {
         if (sender instanceof Player) {
             sender.sendMessage("No, this is a console only command");
         } else {
-            Bukkit.getLogger().info("");
-            System.out.println("Hello, you have messaged the console!");
+            Bukkit.getLogger().info("Hello, you have messaged the console!");
         }
         return true; // Ensure the command returns true
     }
